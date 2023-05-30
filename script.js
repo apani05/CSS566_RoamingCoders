@@ -1,6 +1,6 @@
 let targetWord;
 let remainingGuesses = 5;
-let remainingTime = 180; // 3 minutes in seconds
+let remainingTime = 150; // 2:30 minutes in seconds
 let countdownInterval;
 let wordList;
 
@@ -99,7 +99,7 @@ function checkGuess() {
         hintbox.innerHTML += "<div style='padding-top:4%; text-align: center;'>" + hintText + "</div><br>";
         disableActivity();
         clearInterval(countdownInterval);
-        document.getElementById("timer").innerHTML = "03:00";
+        document.getElementById("timer").innerHTML = "02:30";
     } else if (remainingGuesses > 1) {
         remainingGuesses--;
         resultText.innerHTML =
@@ -117,7 +117,7 @@ function checkGuess() {
         disableActivity();
         clearInterval(countdownInterval);
         hintbox.innerHTML += "<div style='padding-top:4%; text-align: center;'>" + hintText + "</div><br>";
-        document.getElementById("timer").innerHTML = "03:00";
+        document.getElementById("timer").innerHTML = "02:30";
     }
 
     inputField.value = "";
@@ -152,9 +152,9 @@ async function startGame() {
         targetWord = await generateRandomWord();
     }
     remainingGuesses = 5;
-    remainingTime = 180;
+    remainingTime = 150;
     clearInterval(countdownInterval);
-    document.getElementById("timer").innerHTML = "03:00";
+    document.getElementById("timer").innerHTML = "02:30";
     startTimer();
     enableActivity();
     document.getElementById("result").innerHTML = "";
