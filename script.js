@@ -96,7 +96,7 @@ function checkGuess() {
     if (matchedPositions.length === targetWord.length) {
         resultText.innerHTML = "Congratulations! You guessed the word!";
         resultText.style.color = "green";
-        hintbox.innerHTML += "<div style='padding-top:10px; padding-left:32px;'>" + hintText + "</div><br>";
+        hintbox.innerHTML += "<div style='padding-top:4%; text-align: center;'>" + hintText + "</div><br>";
         disableActivity();
         clearInterval(countdownInterval);
         document.getElementById("timer").innerHTML = "03:00";
@@ -106,7 +106,7 @@ function checkGuess() {
             "Incorrect guess. You have " + remainingGuesses +
             " guesses remaining.<br>Correct positions: " + matchedPositions.length +
             ".<br>Letters with incorrect position: " + incorrectPositions + ".";
-        hintbox.innerHTML += "<div style='padding-top:10px; padding-left:32px;'>" + hintText + "</div><br>";
+        hintbox.innerHTML += "<div style='padding-top:4%; text-align: center;'>" + hintText + "</div><br>";
         resultText.style.color = "red";
         inputField.value = "";
     } else {
@@ -116,7 +116,7 @@ function checkGuess() {
         resultText.style.color = "red";
         disableActivity();
         clearInterval(countdownInterval);
-        hintbox.innerHTML += "<div style='padding-top:10px; padding-left:32px;'>" + hintText + "</div><br>";
+        hintbox.innerHTML += "<div style='padding-top:4%; text-align: center;'>" + hintText + "</div><br>";
         document.getElementById("timer").innerHTML = "03:00";
     }
 
